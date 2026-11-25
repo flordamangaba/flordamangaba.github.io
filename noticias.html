@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícias – Associação Flor da Mangaba</title>
+  <meta name="description" content="Novidades da Associação Flor da Mangaba: eventos, conquistas, projetos e prestação de contas.">
+  <meta name="theme-color" content="#a3141f">
+  <meta property="og:title" content="Notícias – Associação Flor da Mangaba">
+  <meta property="og:description" content="Novidades da Associação Flor da Mangaba: eventos, conquistas, projetos e prestação de contas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://flordamangaba.github.io/img/amostra1.webp">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/icone.png" type="image/png" sizes="128x128">
+  <link rel="apple-touch-icon" href="img/icone.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<!-- ===================== MENU ===================== -->
+<header class="topo">
+  <div class="container topo-inner">
+    <a href="index.html" class="marca">
+      <svg class="simbolo" viewBox="0 0 180 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"><path d="M20 130V50H62M20 88H52"/><path d="M88 130V50L124 100L160 50V130"/></g><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#C8102E"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#2E8B57" transform="rotate(72 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#8CB43A" transform="rotate(144 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#EF7D22" transform="rotate(216 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#E8B21E" transform="rotate(288 124 36)"/><circle class="miolo" cx="124" cy="36" r="5" fill="#FFFFFF"/></svg>
+      <span class="marca-texto"><small>ASSOCIAÇÃO</small><strong>Flor da Mangaba</strong></span>
+    </a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="menu">
+      <a href="quem-somos.html">Quem somos</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="mangabafest.html">Mangabafest 2026</a>
+      <a href="noticias.html" class="ativo" aria-current="page">Notícias</a>
+      <a href="transparencia.html">Transparência</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="apoie.html" class="btn btn-pequeno">Apoie</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== CAPA DA PÁGINA ===================== -->
+<section class="pg-capa">
+  <img src="img/amostra1.webp" alt="Público na Amostra Cultural" fetchpriority="high" style="object-position: center 50%">
+  <div class="container">
+    <p class="sobretitulo">Notícias</p>
+    <h1>Acontece na <em>Flor</em></h1>
+    <p class="sub">O que está acontecendo na Associação: eventos, conquistas, projetos e prestação de contas.</p>
+    <div class="botoes">
+      <a href="#newsletter" class="btn btn-amarelo">Receber por e-mail</a>
+      <a href="https://www.instagram.com/boiflordamangaba/" class="btn btn-claro">Instagram</a>
+    </div>
+  </div>
+</section>
+<div class="faixa"></div>
+
+<!-- ===================== NOTÍCIAS ===================== -->
+<!-- Para adicionar uma notícia, copie um bloco <article class="noticia"> e coloque no topo da lista. -->
+<section id="noticias" class="secao secao-creme">
+  <div class="container">
+    <p class="sobretitulo">Notícias</p>
+    <h2>Novidades da Associação</h2>
+    <div class="lista-noticias">
+      <article class="noticia">
+        <time datetime="2026-09-22">22 de setembro de 2026</time>
+        <h3>Nova diretoria eleita e Estatuto atualizado</h3>
+        <p>Em Assembleia Geral, os associados elegeram a Diretoria Executiva e o Conselho Fiscal para 2026–2028 e aprovaram o novo Estatuto Social, que organiza a Associação para atuar como OSC em todas as suas áreas.</p>
+      </article>
+      <article class="noticia c-cultura">
+        <time datetime="2026-07-01">2026</time>
+        <h3>3ª Amostra Cultural reúne mais de 500 pessoas</h3>
+        <p>A terceira edição contou com os principais grupos folclóricos de Humaitá e a presença da convidada Isabeli Nogueira.</p>
+      </article>
+      <article class="noticia c-ambiente">
+        <time datetime="2026-01-15">15 de janeiro de 2026</time>
+        <h3>AFM é certificada como Pontão de Cultura</h3>
+        <p>O Ministério da Cultura reconheceu a Associação como Pontão de Cultura da Política Nacional Cultura Viva, valorizando a formação e o fazer cultural na comunidade.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER ===================== -->
+<!-- Os cadastros vão para a planilha "Cadastros Newsletter - Site Flor da Mangaba" no Google Drive da Associação. -->
+<section id="newsletter" class="newsletter">
+  <div class="container news-inner">
+    <div>
+      <p class="sobretitulo">Newsletter</p>
+      <h2>Receba as novidades da Flor</h2>
+      <p>Ensaios, festivais, editais, projetos e prestação de contas. Pouca mensagem, só o que importa.</p>
+      <p class="news-lgpd">Usamos seus dados só para enviar novidades da Associação, sem repassar a ninguém. Para sair da lista ou pedir a exclusão dos dados, escreva para <a href="mailto:flordamangaba@flordamangaba.com">flordamangaba@flordamangaba.com</a>.</p>
+    </div>
+    <form class="news-form" data-form="https://docs.google.com/forms/d/e/1FAIpQLScSnGowbHH4AAw-lj3misverET8TPwMbqKQCwAT6amnOzdVQg/formResponse">
+      <label>Nome<input name="nome" required autocomplete="name" maxlength="120"></label>
+      <label>E-mail<input type="email" name="email" required autocomplete="email" maxlength="160"></label>
+      <label><span>WhatsApp <small>(opcional)</small></span><input type="tel" name="whatsapp" autocomplete="tel" placeholder="(97) 9 0000-0000" maxlength="30"></label>
+      <label class="news-isca" aria-hidden="true">Não preencha<input name="site" tabindex="-1" autocomplete="off"></label>
+      <label class="aceite"><input type="checkbox" name="aceite" required> <span>Autorizo a Associação Flor da Mangaba a guardar meus dados para me enviar novidades. Posso pedir para sair a qualquer momento.</span></label>
+      <button class="btn btn-amarelo" type="submit">Quero receber</button>
+      <p class="news-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<div class="faixa"></div>
+<footer class="rodape">
+  <div class="container rodape-inner">
+    <svg class="simbolo simbolo-branco" viewBox="0 0 180 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"><path d="M20 130V50H62M20 88H52"/><path d="M88 130V50L124 100L160 50V130"/></g><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#C8102E"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#2E8B57" transform="rotate(72 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#8CB43A" transform="rotate(144 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#EF7D22" transform="rotate(216 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#E8B21E" transform="rotate(288 124 36)"/><circle class="miolo" cx="124" cy="36" r="5" fill="#FFFFFF"/></svg>
+    <div>
+      <p><strong>Associação Flor da Mangaba (AFM)</strong> · Organização da Sociedade Civil · CNPJ 30.980.423/0001-86 · Humaitá, Amazonas</p>
+      <p>Pontão de Cultura · Política Nacional Cultura Viva</p>
+      <p class="rodape-redes">
+        <a href="index.html">Início</a> ·
+        <a href="quem-somos.html">Quem somos</a> ·
+        <a href="projetos.html">Projetos</a> ·
+        <a href="mangabafest.html">Mangabafest 2026</a> ·
+        <a href="noticias.html">Notícias</a> ·
+        <a href="transparencia.html">Transparência</a> ·
+        <a href="apoie.html">Apoie</a>
+      </p>
+      <p class="rodape-redes">
+        <a href="https://www.instagram.com/boiflordamangaba/" target="_blank" rel="noopener">Instagram</a> ·
+        <a href="https://www.facebook.com/boibumbaflordamangaba" target="_blank" rel="noopener">Facebook</a> ·
+        <a href="https://wa.me/5513981993674" target="_blank" rel="noopener">WhatsApp</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<div class="aviso" role="status" aria-live="polite"></div>
+<script src="site.js"></script>
+</body>
+</html>
