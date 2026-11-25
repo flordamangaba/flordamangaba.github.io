@@ -92,13 +92,13 @@
     </a>
     <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
     <nav class="menu">
-      <a href="index.html#quem-somos">Quem somos</a>
-      <a href="index.html#projetos">Projetos</a>
-      <a href="mangabafest.html" class="ativo">Mangabafest 2026</a>
-      <a href="#fotos">Fotos</a>
-      <a href="#historia">Nossa história</a>
-      <a href="index.html#transparencia">Transparência</a>
-      <a href="index.html#apoie" class="btn btn-pequeno">Apoie</a>
+      <a href="quem-somos.html">Quem somos</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="mangabafest.html" class="ativo" aria-current="page">Mangabafest 2026</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="transparencia.html">Transparência</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="apoie.html" class="btn btn-pequeno">Apoie</a>
     </nav>
   </div>
 </header>
@@ -234,6 +234,28 @@
   </div>
 </section>
 
+<!-- ===================== NEWSLETTER ===================== -->
+<!-- Os cadastros vão para a planilha "Cadastros Newsletter - Site Flor da Mangaba" no Google Drive da Associação. -->
+<section id="newsletter" class="newsletter">
+  <div class="container news-inner">
+    <div>
+      <p class="sobretitulo">Newsletter</p>
+      <h2>Receba as novidades da Flor</h2>
+      <p>Ensaios, festivais, editais, projetos e prestação de contas. Pouca mensagem, só o que importa.</p>
+      <p class="news-lgpd">Usamos seus dados só para enviar novidades da Associação, sem repassar a ninguém. Para sair da lista ou pedir a exclusão dos dados, escreva para <a href="mailto:flordamangaba@flordamangaba.com">flordamangaba@flordamangaba.com</a>.</p>
+    </div>
+    <form class="news-form" data-form="https://docs.google.com/forms/d/e/1FAIpQLScSnGowbHH4AAw-lj3misverET8TPwMbqKQCwAT6amnOzdVQg/formResponse">
+      <label>Nome<input name="nome" required autocomplete="name" maxlength="120"></label>
+      <label>E-mail<input type="email" name="email" required autocomplete="email" maxlength="160"></label>
+      <label><span>WhatsApp <small>(opcional)</small></span><input type="tel" name="whatsapp" autocomplete="tel" placeholder="(97) 9 0000-0000" maxlength="30"></label>
+      <label class="news-isca" aria-hidden="true">Não preencha<input name="site" tabindex="-1" autocomplete="off"></label>
+      <label class="aceite"><input type="checkbox" name="aceite" required> <span>Autorizo a Associação Flor da Mangaba a guardar meus dados para me enviar novidades. Posso pedir para sair a qualquer momento.</span></label>
+      <button class="btn btn-amarelo" type="submit">Quero receber</button>
+      <p class="news-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
 <div class="faixa"></div>
 <footer class="rodape">
   <div class="container rodape-inner">
@@ -242,7 +264,15 @@
       <p><strong>Associação Flor da Mangaba (AFM)</strong> · Organização da Sociedade Civil · CNPJ 30.980.423/0001-86 · Humaitá, Amazonas</p>
       <p>Pontão de Cultura · Política Nacional Cultura Viva</p>
       <p class="rodape-redes">
-        <a href="index.html">Página inicial</a> ·
+        <a href="index.html">Início</a> ·
+        <a href="quem-somos.html">Quem somos</a> ·
+        <a href="projetos.html">Projetos</a> ·
+        <a href="mangabafest.html">Mangabafest 2026</a> ·
+        <a href="noticias.html">Notícias</a> ·
+        <a href="transparencia.html">Transparência</a> ·
+        <a href="apoie.html">Apoie</a>
+      </p>
+      <p class="rodape-redes">
         <a href="https://www.instagram.com/boiflordamangaba/" target="_blank" rel="noopener">Instagram</a> ·
         <a href="https://www.facebook.com/boibumbaflordamangaba" target="_blank" rel="noopener">Facebook</a> ·
         <a href="https://wa.me/5513981993674" target="_blank" rel="noopener">WhatsApp</a>
@@ -251,14 +281,7 @@
   </div>
 </footer>
 
-<script>
-  const btn = document.querySelector('.menu-btn');
-  const menu = document.querySelector('.menu');
-  btn.addEventListener('click', () => {
-    const aberto = menu.classList.toggle('aberto');
-    btn.setAttribute('aria-expanded', aberto);
-  });
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('aberto')));
-</script>
+<div class="aviso" role="status" aria-live="polite"></div>
+<script src="site.js"></script>
 </body>
 </html>
