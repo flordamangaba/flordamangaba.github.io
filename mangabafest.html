@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mangabafest 2026 – Boi-Bumbá Flor da Mangaba</title>
+  <meta name="description" content="A apresentação do Boi-Bumbá Flor da Mangaba no Mangabafest 2026, o Festival Folclórico de Humaitá (AM). Fotos da arena, o elenco jovem e a nossa história no festival.">
+  <meta name="theme-color" content="#a3141f">
+  <meta property="og:title" content="Mangabafest 2026 – Boi-Bumbá Flor da Mangaba">
+  <meta property="og:description" content="Penas, alegorias, ritmo e a juventude de Humaitá na arena do Festival Folclórico.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://flordamangaba.github.io/img/fotos-mangabafest/mf-capa.webp">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/icone.png" type="image/png" sizes="128x128">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    /* Estilos só desta página */
+    .mf-capa { position: relative; min-height: min(88vh, 760px); display: flex; align-items: flex-end; color: #fff; overflow: hidden; background: var(--vinho); }
+    .mf-capa > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+    .mf-capa::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(26,20,19,.15) 0%, rgba(26,20,19,.35) 45%, rgba(110,10,16,.92) 100%); }
+    .mf-capa .container { position: relative; z-index: 2; padding: 6rem 0 3.5rem; }
+    .mf-capa .sobretitulo { color: var(--amarelo); }
+    .mf-capa h1 { font-size: clamp(2.8rem, 8vw, 5.6rem); line-height: 1; margin-bottom: 1rem; }
+    .mf-capa h1 em { font-style: normal; color: var(--amarelo); }
+    .mf-capa p.sub { font-size: clamp(1.05rem, 2vw, 1.3rem); max-width: 620px; margin-bottom: 1.8rem; color: #fbeaea; }
+    .mf-capa .botoes { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .menu a.ativo { color: var(--vermelho); }
+
+    .mf-numeros { background: var(--creme); }
+    .mf-numeros .grade { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; padding: 2.2rem 0; text-align: center; }
+    .mf-numeros strong { display: block; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(1.9rem, 4vw, 2.6rem); color: var(--vermelho); line-height: 1.1; }
+    .mf-numeros span { font-size: .9rem; color: var(--cinza); }
+
+    .mf-intro { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
+    .mf-intro .fotos-duplas { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .mf-intro .fotos-duplas img { border-radius: var(--raio); aspect-ratio: 3 / 4; object-fit: cover; width: 100%; box-shadow: 0 18px 40px rgba(110,10,16,.18); }
+    .mf-intro .fotos-duplas img:last-child { margin-top: 2.5rem; }
+
+    .mf-galeria { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 260px; gap: 1rem; }
+    .mf-galeria figure { position: relative; overflow: hidden; border-radius: var(--raio); background: var(--vinho); }
+    .mf-galeria img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .mf-galeria figure:hover img { transform: scale(1.05); }
+    .mf-galeria figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.6rem .9rem .7rem; font-size: .82rem; font-weight: 700; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.78)); }
+    .mf-galeria .alta { grid-row: span 2; }
+
+    .mf-elenco { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: center; }
+    .mf-elenco .boi { display: flex; gap: 1.4rem; align-items: center; background: #fff; border-radius: var(--raio); padding: 1.2rem 1.4rem; margin-top: 1.6rem; box-shadow: 0 6px 20px rgba(26,20,19,.06); }
+    .mf-elenco .boi img { width: 70px; flex-shrink: 0; }
+    .mf-elenco .boi p { margin: 0; color: var(--cinza); font-size: .95rem; }
+    .mf-elenco .foto img { border-radius: var(--raio); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; box-shadow: 0 18px 40px rgba(110,10,16,.15); }
+    .lista-check { list-style: none; margin-top: 1.2rem; }
+    .lista-check li { position: relative; padding-left: 1.9rem; margin-bottom: .7rem; }
+    .lista-check li::before { content: ''; position: absolute; left: 0; top: .35rem; width: 14px; height: 14px; border-radius: 50%; background: var(--cor, var(--vermelho)); }
+    .lista-check li:nth-child(5n+2) { --cor: var(--verde-folha); }
+    .lista-check li:nth-child(5n+3) { --cor: var(--limao); }
+    .lista-check li:nth-child(5n+4) { --cor: var(--laranja); }
+    .lista-check li:nth-child(5n+5) { --cor: var(--amarelo); }
+
+    .mf-historia { display: grid; grid-template-columns: 1fr 1.25fr; gap: 3rem; align-items: start; }
+    .mf-memoria { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 150px; gap: .8rem; }
+    .mf-memoria img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; }
+    .mf-memoria .larga { grid-column: span 2; }
+    .mf-memoria .alta { grid-row: span 2; }
+    .legenda-memoria { font-size: .85rem; margin-top: .8rem; opacity: .85; }
+
+    .mf-apoio { text-align: center; }
+    .mf-apoio p { max-width: 640px; margin: 0 auto 1.8rem; }
+    .mf-apoio .botoes { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+
+    @media (max-width: 960px) {
+      .mf-intro, .mf-elenco, .mf-historia { grid-template-columns: 1fr; gap: 2rem; }
+      .mf-galeria { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; }
+      .mf-numeros .grade { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 520px) {
+      .mf-galeria { grid-auto-rows: 190px; gap: .6rem; }
+      .mf-memoria { grid-auto-rows: 110px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== MENU ===================== -->
+<header class="topo">
+  <div class="container topo-inner">
+    <a href="index.html" class="marca">
+      <svg class="simbolo" viewBox="0 0 180 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"><path d="M20 130V50H62M20 88H52"/><path d="M88 130V50L124 100L160 50V130"/></g><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#C8102E"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#2E8B57" transform="rotate(72 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#8CB43A" transform="rotate(144 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#EF7D22" transform="rotate(216 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#E8B21E" transform="rotate(288 124 36)"/><circle class="miolo" cx="124" cy="36" r="5" fill="#FFFFFF"/></svg>
+      <span class="marca-texto"><small>ASSOCIAÇÃO</small><strong>Flor da Mangaba</strong></span>
+    </a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="menu">
+      <a href="index.html#quem-somos">Quem somos</a>
+      <a href="index.html#projetos">Projetos</a>
+      <a href="mangabafest.html" class="ativo">Mangabafest 2026</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#historia">Nossa história</a>
+      <a href="index.html#transparencia">Transparência</a>
+      <a href="index.html#apoie" class="btn btn-pequeno">Apoie</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== CAPA ===================== -->
+<section class="mf-capa">
+  <img src="img/fotos-mangabafest/mf-capa.webp" alt="Brincante do Boi-Bumbá Flor da Mangaba diante de uma chuva de fogos na arena do Mangabafest 2026" width="720" height="1280" fetchpriority="high">
+  <div class="container">
+    <p class="sobretitulo">Festival Folclórico de Humaitá · Apresentação 2026</p>
+    <h1>Mangaba<em>fest</em> 2026</h1>
+    <p class="sub">Penas, alegorias, toadas e a força da juventude de Humaitá. Veja como foi a apresentação do Boi-Bumbá Flor da Mangaba na arena do festival.</p>
+    <div class="botoes">
+      <a href="#fotos" class="btn btn-amarelo">Ver as fotos</a>
+      <a href="index.html#apoie" class="btn btn-claro">Apoie o boi</a>
+    </div>
+  </div>
+</section>
+<div class="faixa"></div>
+
+<!-- ===================== NÚMEROS ===================== -->
+<section class="mf-numeros">
+  <div class="container grade">
+    <div><strong>2012</strong><span>no festival desde a fundação</span></div>
+    <div><strong>3</strong><span>títulos de campeão (2013, 2015 e 2019)</span></div>
+    <div><strong>~45</strong><span>dançarinos no elenco</span></div>
+    <div><strong>12 a 21</strong><span>anos: a idade da nossa juventude</span></div>
+  </div>
+</section>
+
+<!-- ===================== O FESTIVAL ===================== -->
+<section class="secao">
+  <div class="container mf-intro">
+    <div>
+      <p class="sobretitulo">O festival</p>
+      <h2>A maior festa da cultura popular de Humaitá</h2>
+      <p>O <strong>Mangabafest</strong> é o nome do <strong>Festival Folclórico Humaitaense</strong>, realizado pela Prefeitura de Humaitá, por meio da Secretaria Municipal de Cultura e Turismo, em parceria com as agremiações folclóricas da cidade.</p>
+      <p>É na arena que os bois-bumbás do grupo especial mostram o trabalho de meses: toadas, coreografias, figurinos, alegorias e os itens que contam a história escolhida por cada boi. O festival valoriza as tradições populares e as danças da região, movimenta o artesanato e o comércio local e reúne famílias inteiras nas arquibancadas.</p>
+      <p>O Boi-Bumbá Flor da Mangaba, principal projeto cultural da Associação, está na disputa desde 2012.</p>
+    </div>
+    <div class="fotos-duplas">
+      <img src="img/fotos-mangabafest/mf-item-pena.webp" alt="Brincante com grande cocar de penas vermelhas e douradas dançando na arena" width="720" height="1280" loading="lazy">
+      <img src="img/fotos-mangabafest/mf-tribo.webp" alt="Tribo dançando diante de uma alegoria indígena gigante" width="720" height="1280" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALERIA 2026 ===================== -->
+<!-- Para trocar ou acrescentar fotos: coloque o arquivo .webp em img/ e copie uma linha <figure>. -->
+<section id="fotos" class="secao secao-vermelha">
+  <div class="container">
+    <p class="sobretitulo">A apresentação 2026</p>
+    <h2>Noite de boi na arena</h2>
+    <!-- TEMA 2026: quando o tema estiver definido, acrescente aqui um parágrafo, por exemplo:
+         <p>Em 2026, o Flor da Mangaba levou para a arena o tema <strong>[Tema 2026]</strong>.</p> -->
+    <div class="mf-galeria">
+      <figure class="alta"><img src="img/fotos-mangabafest/mf-boi.webp" alt="O boi Flor da Mangaba, branco com saia vermelha, evoluindo na arena" width="720" height="1280" loading="lazy"><figcaption>O boi Flor da Mangaba</figcaption></figure>
+      <figure><img src="img/fotos-mangabafest/mf-ave.webp" alt="Alegoria de pássaro vermelho com asas abertas e igreja ao fundo" width="720" height="960" loading="lazy" style="object-position: center 30%"><figcaption>Alegoria na arena</figcaption></figure>
+      <figure><img src="img/fotos-mangabafest/mf-chegada.webp" alt="Alegoria com fogos de artifício e dançarinas à frente" width="720" height="960" loading="lazy" style="object-position: center 30%"><figcaption>Fogos na chegada da alegoria</figcaption></figure>
+      <figure class="alta"><img src="img/fotos-mangabafest/mf-penas.webp" alt="Brincante com fantasia de penas vermelhas em movimento" width="720" height="1280" loading="lazy"><figcaption>Penas e movimento</figcaption></figure>
+      <figure class="alta"><img src="img/fotos-mangabafest/mf-dancarino.webp" alt="Dançarino com cocar e estandarte dourado" width="720" height="1280" loading="lazy"><figcaption>Cocar e estandarte</figcaption></figure>
+      <figure class="alta"><img src="img/fotos-mangabafest/mf-fogos.webp" alt="Brincante em frente à pirotecnia rosa na arena" width="720" height="1280" loading="lazy" style="object-position: center 60%"><figcaption>Pirotecnia</figcaption></figure>
+      <figure><img src="img/fotos-mangabafest/mf-ritual.webp" alt="Grande alegoria com chamas e dançarinas indígenas" width="720" height="960" loading="lazy"><figcaption>Ritual na arena</figcaption></figure>
+      <figure><img src="img/fotos-mangabafest/mf-alegoria.webp" alt="Alegoria iluminada com brincantes à frente" width="720" height="1280" loading="lazy" style="object-position: center 55%"><figcaption>As alegorias</figcaption></figure>
+      <figure><img src="img/fotos-mangabafest/mf-boi2.webp" alt="O boi Flor da Mangaba girando na arena diante da plateia" width="720" height="1280" loading="lazy" style="object-position: center 60%"><figcaption>O boi diante da galera</figcaption></figure>
+    </div>
+    <p class="mais-fotos">Mais fotos e vídeos no <a href="https://www.instagram.com/boiflordamangaba/" target="_blank" rel="noopener">Instagram</a> e no <a href="https://www.facebook.com/boibumbaflordamangaba" target="_blank" rel="noopener">Facebook</a></p>
+  </div>
+</section>
+
+<!-- ===================== QUEM FAZ ===================== -->
+<section class="secao secao-creme">
+  <div class="container mf-elenco">
+    <div class="foto">
+      <img src="img/fotos-mangabafest/hist-elenco.webp" alt="Elenco do Boi-Bumbá Flor da Mangaba reunido no palco" width="720" height="593" loading="lazy">
+    </div>
+    <div>
+      <p class="sobretitulo">Quem faz acontecer</p>
+      <h2>Uma apresentação feita pela juventude</h2>
+      <p>Por trás de cada noite de festival há meses de preparação. O boi também é uma escola de convivência, disciplina e cultura amazônica para os jovens da cidade.</p>
+      <ul class="lista-check">
+        <li>Cerca de <strong>45 dançarinos</strong> de 12 a 21 anos a cada ano.</li>
+        <li>Ensaios de <strong>fevereiro a agosto</strong>, das 19h às 21h, na quadra da Associação.</li>
+        <li>Um elenco que se renova entre 50% e 90% a cada ano, abrindo espaço para novas gerações.</li>
+        <li>Intercâmbio com grupos de Manaus, Lábrea e Porto Velho.</li>
+        <li>Uma delegação de 30 dançarinos no Festival Flor Maracujá, em Porto Velho (RO).</li>
+      </ul>
+      <div class="boi">
+        <img src="img/logo.webp" alt="Logo do Boi-Bumbá Flor da Mangaba" width="393" height="560" loading="lazy">
+        <p>O Boi-Bumbá Flor da Mangaba é um projeto da <strong>Associação Flor da Mangaba</strong>, que também atua com educação, esporte e lazer, infância e juventude e meio ambiente. <a href="index.html#projetos">Conheça os outros projetos</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HISTÓRIA ===================== -->
+<section id="historia" class="secao secao-escura">
+  <div class="container mf-historia">
+    <div>
+      <p class="sobretitulo">Nossa história no festival</p>
+      <h2>Mais de uma década na arena</h2>
+      <ol class="linha-tempo">
+        <li><span>2012</span>Fundação da Associação e primeira participação no festival.</li>
+        <li><span>2013</span>Primeiro título de campeão.</li>
+        <li><span>2015</span>Segundo título de campeão.</li>
+        <li><span>2019</span>Terceiro título de campeão.</li>
+        <li><span>2020–21</span>Festival suspenso pela pandemia.</li>
+        <li><span>2026</span>Apresentação no Mangabafest 2026, com o elenco jovem e a Associação certificada como Pontão de Cultura.</li>
+      </ol>
+    </div>
+    <div>
+      <div class="mf-memoria">
+        <img class="larga" src="img/fotos-mangabafest/hist-arena.webp" alt="Sinhazinha e o boi diante do letreiro Mangaba em festival anterior" width="640" height="354" loading="lazy">
+        <img class="alta" src="img/fotos-mangabafest/hist-destaque.webp" alt="Brincante com fantasia de penas e estandarte em festival anterior" width="720" height="720" loading="lazy">
+        <img src="img/fotos-mangabafest/hist-tribo.webp" alt="Dançarinos de tribo com pintura corporal" width="720" height="540" loading="lazy">
+        <img src="img/fotos-mangabafest/hist-cunhas.webp" alt="Dançarinas do boi com figurino vermelho e branco" width="720" height="405" loading="lazy">
+        <img class="larga" src="img/fotos-mangabafest/hist-galera.webp" alt="Galera do Flor da Mangaba iluminada com celulares diante do letreiro" width="617" height="386" loading="lazy">
+      </div>
+      <p class="legenda-memoria">Fotos de festivais anteriores, do acervo da Associação.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== APOIO ===================== -->
+<section class="secao mf-apoio">
+  <div class="container">
+    <p class="sobretitulo">Faça parte</p>
+    <h2>O boi só entra na arena com a comunidade junto</h2>
+    <p>Figurinos, alegorias, transporte e alimentação do elenco dependem do apoio de pessoas e empresas de Humaitá. Doe, patrocine ou venha ser voluntário no próximo festival.</p>
+    <div class="botoes">
+      <a href="index.html#apoie" class="btn">Doe pelo PIX</a>
+      <a href="https://wa.me/5513981993674?text=Ol%C3%A1!%20Minha%20empresa%20quer%20apoiar%20o%20Boi-Bumb%C3%A1%20Flor%20da%20Mangaba%20no%20Mangabafest." target="_blank" rel="noopener" class="btn btn-contorno">Quero patrocinar</a>
+    </div>
+  </div>
+</section>
+
+<div class="faixa"></div>
+<footer class="rodape">
+  <div class="container rodape-inner">
+    <svg class="simbolo simbolo-branco" viewBox="0 0 180 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"><path d="M20 130V50H62M20 88H52"/><path d="M88 130V50L124 100L160 50V130"/></g><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#C8102E"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#2E8B57" transform="rotate(72 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#8CB43A" transform="rotate(144 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#EF7D22" transform="rotate(216 124 36)"/><ellipse class="petala" cx="124" cy="23" rx="8" ry="13" fill="#E8B21E" transform="rotate(288 124 36)"/><circle class="miolo" cx="124" cy="36" r="5" fill="#FFFFFF"/></svg>
+    <div>
+      <p><strong>Associação Flor da Mangaba (AFM)</strong> · Organização da Sociedade Civil · CNPJ 30.980.423/0001-86 · Humaitá, Amazonas</p>
+      <p>Pontão de Cultura · Política Nacional Cultura Viva</p>
+      <p class="rodape-redes">
+        <a href="index.html">Página inicial</a> ·
+        <a href="https://www.instagram.com/boiflordamangaba/" target="_blank" rel="noopener">Instagram</a> ·
+        <a href="https://www.facebook.com/boibumbaflordamangaba" target="_blank" rel="noopener">Facebook</a> ·
+        <a href="https://wa.me/5513981993674" target="_blank" rel="noopener">WhatsApp</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.querySelector('.menu-btn');
+  const menu = document.querySelector('.menu');
+  btn.addEventListener('click', () => {
+    const aberto = menu.classList.toggle('aberto');
+    btn.setAttribute('aria-expanded', aberto);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('aberto')));
+</script>
+</body>
+</html>
